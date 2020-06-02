@@ -161,3 +161,135 @@ nav li ul li:last-child{
 	padding: 90px 15px 15px;
 }
 /*****************************************************************/
+.form_horario{ /* el (.) punto indica clase */
+	width: 1200px;
+	margin: auto; /*para centrar la caja*/
+}
+
+#form_horairo{
+	float:left;
+}
+
+.form_horario h1{ /* de la clase form_horario al h1 dentro */
+	color: #3c93b0;
+	
+}
+
+.form_horario .btn_save{
+	width: 160px;
+	clear: both;
+}
+
+.caja{
+	/* display: inline-block; */
+	float:left;
+	width: 500px;
+	padding: 30px;
+}
+
+.grupo_dias{
+	height: 530px;
+
+}
+
+.grupo_dias input{
+	width: 13px;
+	height: 13px;
+	padding: 5;
+	margin: 5;
+	display: inline-block;
+	/* vertical-align: bottom; */
+	position: relative;
+	/*top: 100px;
+	overflow: hidden;*/
+}
+
+.grupo_dias label{
+	display: block;
+	padding-left: 15px;
+	text-indent: 15px;
+	padding: 5;
+	margin: 5;
+}
+
+
+fieldset{
+	/* display: block; */
+	font-size: 12pt;
+	font-family: 'GothamBook';
+	padding: 25px;
+	/*padding: 5px;*/
+	border-radius: 6px;
+	border: 1px solid #85929e;
+	display: block;
+	font-size: 12pt;
+	margin: 20px auto 5px auto;
+}
+
+
+
+hr{
+	border: 0;
+	background: #CCC; /* gris */
+	height: 1px; /* alto */
+	margin: 50px, 0; /* arriba y abajo 10px y 0 a los lados */
+	display: block; /* ocupar todo el ancho */
+}
+
+form{ /* etiqueta */
+	background: #FFF; /* fondo blanco */
+	margin: auto;
+	padding: 20px 50px; /* 20px arriba y abajo y 50px lados */
+	border: 1px solid #d1d1d1;
+}
+
+label{
+	display: block;
+	font-size: 12pt;
+	font-family: 'GothamBook';
+	margin: 20px auto 5px auto;
+}
+
+input,select,textarea{
+	display: block;
+	width: 100%;
+	font-size: 11pt;
+	padding: 5px;
+	border: 1px solid #85929e;
+	border-radius: 5px;
+}
+
+.notItemOne option:first-child{
+	display: none;
+}
+
+.btn_save{
+	font-size: 12pt;
+	background: #12a4c6;
+	padding: 10px;
+	color: #fff;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+	margin: 35px auto;
+}
+
+.alert{
+	width: 100%;
+	background:  #66e07d66;
+	border-radius: 6px;
+	margin: 20px auto;
+}
+
+.msg_error{
+	color: #e65656;
+}
+
+.msg_save{
+	color: #126e00;
+}
+
+.alert p{
+	padding: 10px;
+}
+

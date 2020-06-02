@@ -13,7 +13,8 @@
 			break;
 		case 2:
 			$msj = 'RESPONSABLE';
-		default:
+			break;
+		case 3:
 			$msj = 'ORDENANZA';
 			break;
 	}	

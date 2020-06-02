@@ -1,7 +1,6 @@
 <nav>
 	
-	<?php 
-		$rol = $_SESSION['rol'];
+	<?php
 		switch ($_SESSION['rol']) {
 			case 1: //INICIO MENÚ ADMIN
 	?>
@@ -47,7 +46,7 @@
 					<li class="principal">
 						<a href="#">Horarios</a>
 						<ul>
-							<li><a href="#">Nuevo Horarios</a></li>
+							<li><a href="responsable_crear_horario.php">Nuevo Horarios</a></li>
 							<li><a href="#">Lista de Horarios</a></li>
 						</ul>
 					</li>

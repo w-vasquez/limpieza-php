@@ -71,7 +71,7 @@
 			<img src="img/login.png" alt="login">
 			<input type="text" name="usuario" placeholder="usuario" required='required'>
 			<input type="password" name="clave" placeholder="contraseña" required='required'>
-			<p class="alert"><?php echo(isset($alert) ? $alert : ''); ?></p>
+			<p class="alert"><?php echo isset($alert) ? $alert : ''; ?></p>
 			<input type="submit" value="INGRESAR">
 		</form>
 
