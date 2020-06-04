@@ -42,7 +42,6 @@
 					$_SESSION['idUser'] = $data['idUsuario'];
 					$_SESSION['nombre'] = $data['nombre']." ".$data['apellido'];
 					$_SESSION['rol'] = $data['idTipoUsuario'];
-
 					header('location: sistema/');
 					
 				}else{

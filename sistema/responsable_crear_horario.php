@@ -1,5 +1,5 @@
 <?php 
-	
+
 	include '../conexion/modelo.php';
 	$modelo = new Curl();
 
@@ -62,7 +62,6 @@
 	}
 
  ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

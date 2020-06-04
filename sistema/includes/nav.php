@@ -75,7 +75,7 @@
 					<li class="principal">
 						<a href="#">Programaciones</a>
 						<ul>
-							<li><a href="#">Asignaturas</a></li>
+							<li><a href="ordenanza_programas.php">Asignaturas</a></li>
 						</ul>
 					</li>
 					<li class="principal">
