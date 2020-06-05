@@ -2,6 +2,7 @@
    
    /*css*/
 * {
+    box-sizing: border-box;
   }
   
   form {
