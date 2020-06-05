@@ -1,12 +1,6 @@
 <?php 
-	
 	include '../conexion/modelo.php';
 	$modelo = new Curl();
-	$link = "http://limpieza.azurewebsites.net/ws/api/laboratorio/mostrar.php";
-
-	//ejecutamos la API de conexión y enviamos los parámetros
-	$data_lab = $modelo -> sentenciaSelect($link);
-	//print_r($data_lab);
  ?>
 
 
@@ -28,6 +22,14 @@
 			if(empty($id_laboratorio)){
 				header('location: ordenanza_programas.php');
 			}
+			$data_lab=($_SESSION['data_lab']);
+			
+			foreach ($data_lab as $laboratorio => $info) {
+				if ($data_lab[$laboratorio]['idLaboratorio'] == $id_laboratorio) {
+					$lab_activo = $data_lab[$laboratorio]['nombre'];
+				} 
+				
+			}
 		 ?>
 		
 
@@ -35,9 +37,9 @@
 
 
 
-		<form action="buscar_horario_porLab.php" method="get" class="form_search">
+		<form action="ordenanza_horario_busqueda.php" method="get" class="form_search">
 			<select name="id_laboratorio" id="id_laboratorio" class="notItemOne">
-				<option value="<?php echo $id_laboratorio ?>" selected></option>
+				<option value="<?php echo $id_laboratorio ?>" selected><?php echo $lab_activo ?></option>
 				<?php foreach ($data_lab as $key) {
 					echo "<option value=".$key['idLaboratorio'].">".$key['nombre']."</option>";
 				} ?>
@@ -64,6 +66,7 @@
 
 			//ejecutamos la API de conexión y enviamos los parámetros
 			$data = $modelo -> sentenciaSelect($link);
+			$_SESSION['data'] = $data;
 			
 			if(empty($data[0]["idHorario"])){
 				echo '<p class="msg_error">No existen horarios asignados al laboratorio </p>';
@@ -79,7 +82,8 @@
 				echo '<td>'.$key['hIni'].'</td>';
 				echo '<td>'.$key['hFin'].'</td>';
 				echo '<td>';
-				echo '<a class="link_edit" href="index.php?acc=editar_estante&idEstante='.$key['idHorario'].'">Cronometrar</a>';
+				echo '<a class="link_edit" href="ordenanza_cronometro.php?idHorario='.$key['idHorario'].'&nomLab='.$key['nomLab'].'&nomHorario='.$key['nomHorario'].'">Cronometrar</a>';
+				echo '<input type="hidden" name="nom_lab" value='.$key['nomLab'].'>';
 
 			?>
 				</td>

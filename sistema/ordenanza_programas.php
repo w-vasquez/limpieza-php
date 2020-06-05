@@ -6,7 +6,6 @@
 
 	//ejecutamos la API de conexión y enviamos los parámetros
 	$data_lab = $modelo -> sentenciaSelect($link);
-	//print_r($data_lab);
  ?>
 
 
@@ -19,15 +18,17 @@
 	<title>Horarios asignados</title>
 </head>
 <body>
-	<?php include 'includes/header.php';?>
+	<?php include 'includes/header.php';
+		$_SESSION['data_lab'] = $data_lab;
+	?>
 
 	<section id="container">
 		<h1>Lista de horarios</h1>
 
-		<form action="buscar_horario_porLab.php" method="get" class="form_search">
+		<form action="ordenanza_horario_busqueda.php" method="get" class="form_search">
 			<select name="id_laboratorio" id="id_laboratorio">
+				<option value="0">Filtrar por laboratorio</option>
 				<?php foreach ($data_lab as $key) {
-					
 					echo "<option value=".$key['idLaboratorio'].">".$key['nombre']."</option>";
 				} ?>
 			</select>
@@ -48,16 +49,17 @@
 				<th>Acción</th>
 			</tr>
 			<tr>
-
+			
 			<?php 
 
 			$link = "http://limpieza.azurewebsites.net/ws/api/vistaHorario/mostrarOrdenanza.php?idOrdenanza=".$_SESSION['idUser'];
 
 			//ejecutamos la API de conexión y enviamos los parámetros
 			$data = $modelo -> sentenciaSelect($link);
-
+			//print_r($data);
 			foreach ($data as $key) {
 
+				
 				echo '<td>'.$key['idHorario'].'</td>';
 				echo '<td>'.$key['nomHorario'].'</td>';
 				echo '<td>'.$key['fCrea'].'</td>';
@@ -66,7 +68,8 @@
 				echo '<td>'.$key['hIni'].'</td>';
 				echo '<td>'.$key['hFin'].'</td>';
 				echo '<td>';
-				echo '<a class="link_edit" href="index.php?acc=editar_estante&idEstante='.$key['idHorario'].'">Cronometrar</a>';
+				echo '<a class="link_edit" href="ordenanza_cronometro.php?idHorario='.$key['idHorario'].'&nomLab='.$key['nomLab'].'&nomHorario='.$key['nomHorario'].'">Cronometrar</a>';
+				echo '<input type="hidden" name="nom_lab" value='.$key['nomLab'].'>';
 
 			?>
 				</td>

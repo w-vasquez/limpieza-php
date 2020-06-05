@@ -15,12 +15,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1{
 	font-size: 26px;
-	padding: 20px;
+	/* padding: 10px; */
 }
 h2{
 	font-size: 20px;
 }
-h3{
+h3{	
 	font-size: 18px;
 }
 h4{
@@ -167,7 +167,7 @@ nav li ul li:last-child{
 	margin: auto; /*para centrar la caja*/
 }
 
-#form_horairo{
+#form_horario{
 	float:left;
 }
 
@@ -353,7 +353,7 @@ margin-top:10px
 
 /*****************buscador*************/
 .form_search{
-	width: 35%;
+	width: 30%;
 	display: -webkit-inline-flex;
 	display: -moz-inline-flex;
 	display: -ms-inline-flex;
