@@ -6,15 +6,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="./js/cronometro2.js"></script>
-    <link rel="StyleSheet" href="./css/cronometr2o.css" TYPE="text/css">
+    <script src="js/cronometro2.js"></script>
+    <link rel="StyleSheet" href="css/cronometr2o.css" TYPE="text/css">
    
 	<meta charset="UTF-8">
-	<?php include './includes/scripts.php' ?>
+	<?php include 'includes/scripts.php' ?>
 	<title>Crear Usuario</title>
 </head>
 <body>
-	<?php include './includes/header.php' ?>
+	<?php include 'includes/header.php' ?>
 
 	<section id="container">
 		<div class="form_horario">
