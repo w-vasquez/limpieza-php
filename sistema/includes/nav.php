@@ -60,7 +60,7 @@
 					<li class="principal">
 						<a href="#">Calificación</a>
 						<ul>
-							<li><a href="#">Nueva Calificación</a></li>
+							<li><a href="responsable_lista_programa.php">Nueva Calificación</a></li>
 							<li><a href="#">Lista de calificaciones</a></li>
 						</ul>
 					</li>
