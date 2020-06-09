@@ -9,7 +9,7 @@
 					<li class="principal">
 						<a href="#">Usuarios</a>
 						<ul>
-							<li><a href="#">Nuevo Usuario</a></li>
+							<li><a href="admin_registro_usuario.php">Nuevo Usuario</a></li>
 							<li><a href="#">Lista de Usuarios</a></li>
 							<li><a href="#">Asignar Ordenanza</a></li>
 						</ul>

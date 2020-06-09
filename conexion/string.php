@@ -17,7 +17,7 @@
 
         public function conectar()
 		{
-			$mysqli = @new mysqli($this->host, $this->usuario, $this->clave,$this->db_name);
+			$mysqli = @mysqli_connect($this->host, $this->usuario, $this->clave,$this->db_name);
 
 			if ($mysqli->connect_errno)
 			{
